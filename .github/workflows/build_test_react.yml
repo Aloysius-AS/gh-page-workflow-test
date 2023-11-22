@@ -14,10 +14,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: 14
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -25,7 +21,8 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14
+          cache: 'npm'
       - name: npm ci, build and test
         run: |
           npm ci
