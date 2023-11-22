@@ -5,7 +5,6 @@ export interface Item {
   priority: number;
 }
 
-
 const getTableStyleProps = (): {} => {
   return {
     style: {
@@ -18,7 +17,6 @@ const getTableStyleProps = (): {} => {
     },
   };
 };
-
 
 class ToDoList extends React.Component<{ items: Item[] }, {}> {
   render() {
