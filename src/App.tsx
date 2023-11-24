@@ -4,7 +4,7 @@ import ToDoList, { Item } from "./ToDoList";
 
 const initialList = [
   {
-    task: "Pick up Milk",
+    task: "Pick up Mail",
     priority: 1,
   },
   {
